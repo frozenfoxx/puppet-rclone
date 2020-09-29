@@ -1,0 +1,7 @@
+<% if @remotes.length > 0 -%>
+<% @remotes.each do |remote, values| -%>
+[<%= "#{remote}" -%>]
+type = <%= values['type'] %>
+url = <%= values['url'] %>
+<% end %>
+<% end -%>
