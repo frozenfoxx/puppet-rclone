@@ -1,7 +1,5 @@
 # rclone
 
-Puppet module to configure rclone on a system
-
 [Rclone](https://rclone.org/) is a powerful cloud synchronization tool. This module installs and configures it.
 
 #### Table of Contents
