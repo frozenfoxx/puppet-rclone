@@ -7,6 +7,9 @@
 class rclone::install {
   # Set variables based on OS family
   case $facts['os']['family'] {
+    'Darwin': {
+      $rclone_url = 'https://downloads.rclone.org/rclone-current-osx-amd64.zip'
+    }
     'Debian': {
       $rclone_url = 'https://downloads.rclone.org/rclone-current-linux-amd64.zip'
     }

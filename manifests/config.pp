@@ -9,6 +9,10 @@ class rclone::config {
 
   # Set variables based on OS family
   case $facts['os']['family'] {
+    'Darwin': {
+      $gid = 0
+      $uid = 0
+    }
     'Debian': {
       $gid = 0
       $uid = 0

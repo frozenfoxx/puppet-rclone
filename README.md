@@ -47,7 +47,7 @@ include rclone
 
 ## Limitations
 
-This module has only been tested on Debian-based systems though rclone is multiplatform. It also does not have a way built-in to work with environment variables such as when handling Docker container-based launches.
+This module has only been tested on Debian-based systems though rclone is multiplatform. It also does not have a way built-in to work with environment variables such as when handling Docker container-based launches. It will likely work on macOS though would need additional handling to make it more native.
 
 ## Development
 

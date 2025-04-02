@@ -5,13 +5,23 @@
 # @example
 #   include rclone::dirs
 class rclone::dirs {
-  $rclone_dirs = [
-    '/root/.config',
-    '/root/.config/rclone'
-  ]
+  $rclone_dirs = $facts['os']['family'] ? {
+    'Darwin' => [
+      '/var/root/.config',
+      '/var/root/.config/rclone',
+    ],
+    default => [
+      '/root/.config',
+      '/root/.config/rclone'
+    ],
+  }
 
   # Set variables based on OS family
   case $facts['os']['family'] {
+    'Darwin': {
+      $gid = 0
+      $uid = 0
+    }
     'Debian': {
       $gid = 0
       $uid = 0
